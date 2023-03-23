@@ -1,0 +1,59 @@
+<mat-toolbar
+  color="primary"
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+>
+  <div>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My Todo</span>
+    <span class="example-spacer"></span>
+  </div>
+  <div>
+    <button
+      mat-button
+      color="accent"
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      matBadge="{{ count }}"
+      matBadgeColor="accent"
+    >
+      Home
+    </button>
+
+    <button
+      mat-button
+      color="accent"
+      routerLink="form"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Form
+    </button>
+    <button
+      mat-button
+      color="accent"
+      routerLink="todo"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Todo
+    </button>
+    <button
+      mat-button
+      color="accent"
+      routerLink="certificate"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Certificate
+    </button>
+    <!-- </button> -->
+  </div>
+</mat-toolbar>

@@ -1,0 +1,117 @@
+<div
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  fxLayoutGap="40px"
+  style="margin-top: 100px; margin-left: 20px; margin-right: 20px"
+>
+  <div class="form-container">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>First Name</mat-label>
+        <input
+          matInput
+          placeholder="Enter First Name"
+          [(ngModel)]="firstname"
+          name="fname"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Last Name</mat-label>
+        <input
+          matInput
+          placeholder="Enter Last Name"
+          [(ngModel)]="lastname"
+          name="lname"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Gender</mat-label>
+        <input
+          matInput
+          placeholder="Enter Gender"
+          [(ngModel)]="gender"
+          name="gender"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Field</mat-label>
+        <input
+          matInput
+          placeholder="Enter Field"
+          [(ngModel)]="field"
+          name="field"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Head of Event</mat-label>
+        <input
+          matInput
+          placeholder="Head of Event"
+          [(ngModel)]="HeadOfEvent"
+          name="hod"
+        />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Mentor</mat-label>
+        <input
+          matInput
+          placeholder="Mentor"
+          [(ngModel)]="mentor"
+          name="mentor"
+        />
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="card-container" style="margin-left: 0px; margin-right: 70px">
+    <div class="cerificate-border">
+      <div class="element"></div>
+      <h3 class="certificate-titile">CERTIFICATE</h3>
+      <h3 class="certifacte-sub-title">OF APPRECIATION</h3>
+      <hr style="width: 200px; margin-top: 29px" />
+      <h3 class="award-presentation">THE FOLLOWING AWARD IS GIVEN TO</h3>
+      <h1 class="winner-name-style">{{ firstname }} {{ lastname }}</h1>
+      <hr class="winner-line" />
+      <p style="font-size: 14px; margin-bottom: 0px">
+        this certificate is given to
+        <strong>{{ firstname }} {{ lastname }}</strong> <br />
+        for achievement in the field of <strong>{{ field }}</strong> and proves
+        that {{ gender }} is competent in this field
+      </p>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <div style="margin-top: 80px">
+          <!-- <hr style="width: 100px" /> -->
+          <p>
+            <strong>{{ HeadOfEvent }}</strong
+            ><br /><span style="color: rgb(241, 206, 3)">Head Of Event</span>
+          </p>
+        </div>
+        <div style="position: relative">
+          <img
+            class="banner-style"
+            src="https://www.nicepng.com/png/detail/9-93008_ribbon-png-ribbon-banner-gold-banner-festa-do.png"
+          />
+          <p class="celeb">Congratulations</p>
+        </div>
+        <div style="margin-top: 80px">
+          <!-- <hr style="width: 100px" /> -->
+          <p>
+            <strong>{{ mentor }}</strong
+            ><br /><span style="color: rgb(241, 206, 3)">Mentor</span>
+          </p>
+        </div>
+      </div>
+      <p style="text-align: start"><strong>Issued on</strong> {{ formated }}</p>
+      <div class="element2"></div>
+    </div>
+  </div>
+</div>
+<div style="text-align: center; margin-top: 40px; margin-left: 600px">
+  <button type="button" class="printBtn" (click)="onPrint()">
+    Download Certificate
+  </button>
+</div>

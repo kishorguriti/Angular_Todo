@@ -1,0 +1,106 @@
+
+.main-container
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.card-container
+  border: 10px solid
+  border-image: linear-gradient(45deg, #0F2A5F, #EE6C4D) 1
+
+  //  height:70vh;
+  // position: relative;
+  width: 60vw
+  background-color: #F6F5F1
+
+.form-container
+  border: 1px solid black
+  padding: 10px
+
+  // height:43vh;
+  width: 20vw
+
+.cerificate-border
+  border: 2px solid goldenrod
+  margin: 15px
+  text-align: center
+  padding: 24PX
+  position: relative
+
+.certificate-titile
+  font-family: serif
+  font-size: 45px
+  font-weight: 500
+  letter-spacing: 4px
+
+.certifacte-sub-title
+  font-size: 30px
+  margin-top: 5px
+  font-family: serif
+  letter-spacing: 3px
+  color: rgb(241, 206, 3)
+
+.award-presentation
+  font-family: "monospace"
+  font-size: 16px
+  margin-top: 25px
+  word-spacing: 4px
+  font-weight: 500
+
+.winner-name-style
+  font-family: 'Lobster', cursive
+  margin-bottom: 0px
+
+.winner-line
+  width: 400px
+  margin-top: 6px
+  border-color: goldenrod
+
+.banner-style
+  height: 80px
+  width: 250px
+
+  // position:relative
+
+.printBtn
+  background-color: rgb(50, 9, 9)
+  border-radius: 8px
+  padding: 14px
+  color: white
+  border: none
+  margin-left: 120px
+
+.celeb
+  position: absolute
+  left: 70px
+  top: 20px
+  font-size: 17px
+  font-family: 'Lobster', cursive
+
+@media print
+  .form-container, .printBtn
+    display: none !important
+
+.element
+  width: 0
+  height: 0
+  border: 40px solid transparent
+  border-left-color: rgb(50, 9, 9)
+  border-top-color: rgb(50, 9, 9)
+  position: absolute
+  left: -20px
+  top: -20px
+
+.element2
+  width: 0
+  height: 0
+  border: 40px solid transparent
+  border-right-color: rgb(50, 9, 9)
+  border-bottom-color: rgb(50, 9, 9)
+  position: absolute
+  right: -20px
+  bottom: -20px
+  
+
+

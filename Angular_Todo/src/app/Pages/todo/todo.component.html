@@ -1,0 +1,41 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="80">
+        <h2 style="margin-left: 500px; margin-top: 30px">Todo</h2>
+
+        <form [formGroup]="TodoForm" (submit)="onSubmit($event)">
+            <div style="margin-bottom: 20px">
+                <mat-form-field class="example-full-width" style="margin-bottom: 40px" fxFlexFill>
+                    <mat-label> Title</mat-label>
+                    <input type="text" matInput formControlName="title" placeholder="Enter title" />
+                    <mat-error *ngIf="TodoForm .get('title')?.errors?.['required'] ">
+                        Todo Title is required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <mat-radio-group aria-label="Select an option" formControlName="completed">
+                    <mat-radio-button value="Incomplete">Incomplete</mat-radio-button>
+                    <mat-radio-button value="Done">Done</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div style="margin-bottom: 20px">
+                <mat-form-field class="example-full-width" fxFlexFill>
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="target" />
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="TodoForm.get('target')?.errors?.['required'] ">
+                        Target Date is required</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div style="margin-top: 30px">
+                <div fxLayout="row" fxLayoutAlign="start center" fxFlexFill>
+                    <button mat-raised-button color="primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
